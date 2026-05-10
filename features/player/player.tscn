@@ -1,23 +1,24 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene format=3 uid="uid://tn443i4ta8m4"]
 
-[ext_resource type="Script" path="res://features/player/player.gd" id="1_player"]
-[ext_resource type="Texture2D" path="res://assets/sprites/characters/Player/16x16/16x16 Idle-Sheet.png" id="2_idle"]
+[ext_resource type="Script" uid="uid://ctlqfw1fnbi23" path="res://features/player/player.gd" id="1_player"]
+[ext_resource type="Texture2D" uid="uid://d1u4xs6h1d645" path="res://assets/sprites/characters/Player/16x16/16x16 Idle-Sheet.png" id="2_idle"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hitbox"]
 radius = 4.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=585363925]
 script = ExtResource("1_player")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=82301060]
 texture = ExtResource("2_idle")
-centered = true
 offset = Vector2(0, -8)
 region_enabled = true
-region_rect = Rect2(0, 0, 16, 24)
+region_rect = Rect2(0, 0, 24, 24)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=424485543]
+position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_hitbox")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1442180609]
+position = Vector2(1, -4)
 zoom = Vector2(4, 4)

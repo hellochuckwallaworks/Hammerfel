@@ -1,7 +1,7 @@
 extends CharacterBody2D
 ## 8-directional top-down player.
 ##
-## Sprite sheets: 96x120 px, 16x24 px per frame, 6 frames per row, 5 rows:
+## Sprite sheets: 96x120 px, 24x24 px per frame, 4 frames per row, 5 rows:
 ##   row 0 = down
 ##   row 1 = down-right  (mirror for down-left)
 ##   row 2 = right       (mirror for left)
@@ -14,9 +14,9 @@ extends CharacterBody2D
 ## events to those actions.
 
 const SPEED := 60.0
-const FRAME_W := 16
+const FRAME_W := 24
 const FRAME_H := 24
-const FRAMES_PER_ANIM := 6
+const FRAMES_PER_ANIM := 4
 const FRAME_DURATION := 0.12  # seconds per frame (~8 fps cycle)
 
 const IDLE_SHEET := preload("res://assets/sprites/characters/Player/16x16/16x16 Idle-Sheet.png")
