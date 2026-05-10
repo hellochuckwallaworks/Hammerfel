@@ -1,6 +1,8 @@
 # Hammerfel
 
-A Godot 4.x project.
+A cozy dwarven farming & crafting RPG. Top-down 2D, pixel art, Godot 4.x.
+
+> **Read first:** [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) explains the folder layout and conventions. [`docs/Hammerfel_GDD_v0.2.docx`](docs/Hammerfel_GDD_v0.2.docx) is the Game Design Document.
 
 ---
 
