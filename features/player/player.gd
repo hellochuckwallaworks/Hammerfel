@@ -1,9 +1,10 @@
 extends CharacterBody2D
 ## 8-directional top-down player.
 ##
-## Sprite sheets: 96x120 px, 4 columns x 5 rows of 24x24 cells. The dwarf
-## art itself is 16x16, sitting inside each cell with 4 px of padding on
-## each side, so we render a 16x16 window inset by FRAME_OFFSET.
+## Sprite sheets: 96x120 px, 4 columns x 5 rows of 24x24 cells. Inside each
+## cell the dwarf art is 12w x 16h, centered horizontally (6 px padding each
+## side) and offset 8 px down from the cell top. We render a 16x16 window at
+## inset (4, 8) — wide enough for the art plus a few px of horizontal slack.
 ##   row 0 = down
 ##   row 1 = down-right  (mirror for down-left)
 ##   row 2 = right       (mirror for left)
@@ -19,8 +20,8 @@ const CELL_W := 24                    # stride between frames in the sheet
 const CELL_H := 24
 const FRAME_W := 16                   # visible sprite size
 const FRAME_H := 16
-const FRAME_OFFSET_X := 4             # inset of the 16x16 art inside each 24x24 cell
-const FRAME_OFFSET_Y := 4
+const FRAME_OFFSET_X := 4             # x inset of the 16x16 capture in each cell
+const FRAME_OFFSET_Y := 8             # y inset — art starts 8 px down in each cell
 const FRAMES_PER_ANIM := 4
 const FRAME_DURATION := 0.12  # seconds per frame (~8 fps cycle)
 
