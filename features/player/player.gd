@@ -1,7 +1,9 @@
 extends CharacterBody2D
 ## 8-directional top-down player.
 ##
-## Sprite sheets: 96x120 px, 24x24 px per frame, 4 frames per row, 5 rows:
+## Sprite sheets: 96x120 px, 4 columns x 5 rows of 24x24 cells. The dwarf
+## art itself is 16x16, sitting inside each cell with 4 px of padding on
+## each side, so we render a 16x16 window inset by FRAME_OFFSET.
 ##   row 0 = down
 ##   row 1 = down-right  (mirror for down-left)
 ##   row 2 = right       (mirror for left)
@@ -13,8 +15,12 @@ extends CharacterBody2D
 ## + left analog stick, configured in project.godot).
 
 const SPEED := 60.0
-const FRAME_W := 24
-const FRAME_H := 24
+const CELL_W := 24                    # stride between frames in the sheet
+const CELL_H := 24
+const FRAME_W := 16                   # visible sprite size
+const FRAME_H := 16
+const FRAME_OFFSET_X := 4             # inset of the 16x16 art inside each 24x24 cell
+const FRAME_OFFSET_Y := 4
 const FRAMES_PER_ANIM := 4
 const FRAME_DURATION := 0.12  # seconds per frame (~8 fps cycle)
 
@@ -52,8 +58,8 @@ func _physics_process(delta: float) -> void:
 
 	sprite.texture = WALK_SHEET if moving else IDLE_SHEET
 	sprite.region_rect = Rect2(
-		_frame_index * FRAME_W,
-		_facing_row * FRAME_H,
+		_frame_index * CELL_W + FRAME_OFFSET_X,
+		_facing_row * CELL_H + FRAME_OFFSET_Y,
 		FRAME_W, FRAME_H
 	)
 	sprite.flip_h = _facing_flip
