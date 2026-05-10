@@ -9,9 +9,8 @@ extends CharacterBody2D
 ##   row 4 = up
 ## Left-side directions reuse the right-side rows with flip_h = true.
 ##
-## Input: ui_left / ui_right / ui_up / ui_down (arrow keys + gamepad d-pad
-## by default). To add WASD: Project Settings -> Input Map -> add KEY_W/A/S/D
-## events to those actions.
+## Input: move_left / move_right / move_up / move_down (WASD + arrow keys
+## + left analog stick, configured in project.godot).
 
 const SPEED := 60.0
 const FRAME_W := 24
@@ -36,13 +35,7 @@ var _facing_row := 0     # default facing down
 var _facing_flip := false
 
 func _physics_process(delta: float) -> void:
-	var input_vec := Vector2(
-		Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"),
-		Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-	)
-	if input_vec.length() > 1.0:
-		input_vec = input_vec.normalized()
-
+	var input_vec := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = input_vec * SPEED
 	move_and_slide()
 
