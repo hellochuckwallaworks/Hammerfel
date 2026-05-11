@@ -1,0 +1,513 @@
+﻿Kyndholm  |  Game Design Document  |  v0.1 DRAFT
+
+
+Kyndholm
+Game Design Document
+Version 0.3  •  Working Draft
+
+
+A cozy dwarven farming & crafting RPG
+Top-down  •  32×32 Pixel Art  •  Co-op Play
+
+
+________________
+
+
+1. Game Overview
+
+
+1.1 Concept Statement
+Kyndholm is a cozy, top-down, 32×32 pixel-art RPG inspired by Stardew Valley, set in a richly realised dwarven world. Players take the role of a lone dwarf tasked with founding a new settlement in untamed, hostile territory. Through farming, mining, crafting, brewing, rune magic, fishing, and cooking, they transform a wild frontier into a thriving keep. 
+1.2 At a Glance
+Working Title
+	Kyndholm
+	Genre
+	Cozy Farming / Action RPG
+	Perspective
+	Top-down 2D
+	Art Style
+	32×32 Pixel Art
+	Target Platform
+	PC (Windows / macOS / Linux) — console TBD
+	Target Audience
+	Fans of Stardew Valley, Dwarf Fortress, Moonlighter
+	Player Count
+	Co-op 2-Player
+	Target Rating
+	ESRB E10+ / PEGI 12 (Fantasy Violence)
+	
+
+1.3 Elevator Pitch
+You are a young dwarven champion —tasked with the responsibility of claiming new land for the High Thane. Armed with a pickaxe, a handful of seeds, and an old family recipe for mushroom ale, you must dig, grow, craft, and fight your way to prosperity. Word of your success will spread throughout the clans, drawing new settlers to your banner — and drawing the hungry eyes of goblin warbands or worse…
+1.4 Unique Selling Points
+* Unique dwarven setting — no humans, no elves, little sun, lots of ale.
+* Integrated rune-crafting system that enhances tools, weapons, and structures
+* Dynamic settlement growth: NPCs arrive organically as your hold gains renown
+* Escalating raid system tied to settlement worth, not just the calendar
+* Brewing as a first-class mechanic — ales and spirits buff the whole settlement
+* Dynamic npc relationships petition system.
+
+
+________________
+
+
+2. Story & Setting
+
+
+2.1 World Overview
+The world of Kyndholm exists almost entirely underground — a vast network of tunnels, caverns, and subterranean plains lit by bioluminescent fungi, glowing ore veins, and carefully tended hearth-fires. Dwarven civilisation is organised into Holdfasts: fortified communities built around a common hearth and forge.
+The Great Sundering — a catastrophic collapse of the ancient Deephall Empire three centuries ago — fractured many holds and scattered clans across the deep tunnels. Frontier territory remains dangerous, rich with resources but prowled by goblin raiders, cave trolls, and worse.
+2.2 Main Story Arc
+Act I — The Charter
+The player receives a Royal Charter from the High Thane himself, granting rights to a newly surveyed site: a promising cavern called the Kyndholm. They set out alone with basic supplies, a sturdy companion, and the expectation that they will either establish a viable outpost or never be heard from again.
+* Tutorial phase: basic farming, mining, and crafting
+* First season of survival — food, shelter, tools
+* Discovery of ancient rune-stones left by a pre-Sundering hold
+* Establish contact with outside world; word begins to spread
+Act II — The Growing Hold
+As Kyndholm grows, other dwarves begin to arrive. Each settler brings unique skills and personal storylines. The settlement attracts the attention of local goblin clans who begin probing raids.
+* Settlement mechanics unlock: assigning roles to settlers
+* Friendship / relationship system with settlers deepens
+* Rune mysteries deepen — design fragments of a lost dwarven device
+* Raids escalate; first major raid event — 'The Night of Blades'
+Act III — The Iron Hearts
+With Kyndholm established, exploration of the mines continues and routes to the surface are unlocked. Managing a large community becomes more difficult, as appeasing everyone is simply not possible.
+* Juggling settler needs vs time & resources.
+* Building of defenses to protect against raids.
+* Unlocking of Waypoint Runes to enable fast travel.
+* New buildings to house collections, collectable artifacts & objects that reveal store lore.
+
+
+
+
+Act IV — Legacy of the Deep
+A rival Thane seeks to absorb Kyndholm into his own territory. Ancient ruins beneath the cavern begin to stir. The player must unite the settlers, master the old rune-craft, and decide the political fate of her hold.
+* Political storyline: independence vs. integration.
+* Final dungeon: the Deephall Undercroft
+* Climactic siege event: The Iron Tide (Orc Warchief)
+* Multiple endings based on decisions and settlement strength
+2.3 The Player Character
+Default Name
+	Boldur Ironbeard (fully customizable)
+	Background
+	War hero who is the last surviving member of Clan Ironbeard
+	Motivation
+	Champion a village and restore your clan to its previous glory. 
+	Personality
+	Chosen through optional dialogue choices.
+	________________
+
+
+3. Core Gameplay
+
+
+3.1 Game Loop
+The core daily loop follows a familiar cozy-game rhythm, adapted for the underground setting:
+* Morning: tend crops, check brewing vats, collect deliveries/mail.
+* Day: explore, fish subterranean lakes, craft, trade with settlers and merchants
+* Evening: cook, brew, socialise with settlers, reinforce defences
+* Night: rest (or manage unexpected events/raids) — time passes while sleeping
+Stamina limits daily activity, replenished by food and rest. Dwarves are stoic — stamina recovers slowly without good food and ale.
+3.2 Time System
+Day Length
+	20 real-time minutes (configurable in settings)
+	Season Length
+	28 in-game days
+	Seasons
+	Deepchill (Winter), Stonethaw (Spring), Firerun (Summer), Amberfall (Autumn)
+	Year Length
+	112 in-game days
+	
+
+3.3 Stamina, Energy, & Health
+* Stamina: consumed by farming, mining, combat, and heavy crafting
+* Health: lost in combat; regenerates slowly or via consumables
+* Energy: Used to power Runic Magic; regenerates slowly or via consumables
+* Passing out from stamina loss has a penalty (gold lost, reduced stamina the next day)
+* Good meals grant stamina bonuses for the day.
+* Ales brewed at the hold provide settlement-wide buffs when served at the tavern
+________________
+
+
+4. Skills & Gameplay Systems
+
+
+Each major activity has its own skill track. Skills level through use and unlock recipes, efficiency bonuses, and new interactions. All skills share a 1–10 level scale with meaningful milestones at levels 3, 6, and 10.
+4.0 Skill Progression
+Farming
+	Levels 1–10; milestones at 3 (irrigation), 6 (rare crops), 10 (giant crop mastery)
+	Mining
+	Levels 1–10; milestones at 3 (detect ore veins), 6 (passive nodes), 10 (deep tunnel access)
+	Brewing
+	Levels 1–10; milestones at 3 (barrel ageing), 6 (rare recipes), 10 (legendary brews)
+	Rune Crafting
+	Levels 1–10; milestones at 3 (tool runes), 6 (dual rune slots), 10 (legendary runes)
+	Fishing
+	Levels 1–10; milestones at 3 (deep water access), 6 (legend fish lure), 10 (all legend fish)
+	Cooking
+	Levels 1–10; milestones at 3 (complex meals), 6 (feast recipes), 10 (mythic meals)
+	Crafting
+	Levels 1–10; milestones at 3 (advanced tools), 6 (rune bench access), 10 (legendary items)
+	Combat
+	Levels 1–10; milestones at 3 (dodge upgrade), 6 (dual wield), 10 (Warbold title)
+	________________
+
+
+4.1 Farming
+Overview
+Players cultivate underground crops in tilled soil, relying on phosphorescent grow-lamps, mushroom compost, and underground water channels rather than sunlight and rain.
+Crop Types
+* Fungi Crops: Cave Mushrooms, Glowcaps, Stoneblooms (staple foods, fast-growing)
+* Root Crops: Deepbeets, Iron Tubers, Pale Turnips (slow, high yield, cooking ingredients)
+* Rare Crops: Ember Peppers, Frostmoss, Crystalweed (brewing, rune reagents, high value)
+Mechanics
+* Watering channels can be dug to automate irrigation (mid-game unlock)
+* Compost bin converts waste into fertiliser that improves crop quality
+* Seasonal rotation matters — some crops only grow in specific seasons
+* Giant crop events: rare oversized crops worth bonus gold and XP
+4.2 Mining
+Overview
+Mining is both an exploration mechanic and a resource economy. Ore veins deplete but regenerate over seasons. Deeper tunnels yield richer ore but greater danger.
+Ore Tiers
+Ore
+	Depth
+	Primary Uses
+	Tin
+	Shallow depths
+	Basic tools, nails, fittings
+	Copper
+	Mid-depth
+	Cooking equipment, wiring, coinage
+	Iron
+	Mid-depth
+	Weapons, armour, structural
+	Stoneheart Silver
+	Deep tunnels
+	Rune-craft, fine jewellery
+	Deepfire Gold
+	Ancient ruins
+	High-value trade, legendary items
+	
+
+Mechanics
+* Mining skill improves pickaxe efficiency and chance of bonus ore
+* Cave-ins are a risk when mining unsupported tunnels — supports can be crafted
+* Passive mining nodes (automated carts) unlock at Mining 5
+* Hidden caverns may contain ancient ruins, rare materials, or hostile creatures
+4.3 Brewing
+Overview
+Brewing is a multi-step process that converts crops into food & drinks. Brewed goods can be consumed for personal buffs, sold for profit, or served in the settlement tavern to provide communal bonuses.
+* Stage 1: Malting — process grain or fungi into malt
+* Stage 2: Fermentation — combine malt, water, and additives in a vat (time-based)
+* Stage 3: Ageing (optional) — barrel ageing improves quality and adds modifiers
+* Stage 4: Kegging or bottling — determines serving format
+Brew Effects (Examples)
+Brew
+	Rarity
+	Effect
+	Deepstone Stout
+	Common
+	+15 Max Stamina for 1 day
+	Glowcap Lager
+	Common
+	+10% Mining speed for 1 day
+	Ember Spirits
+	Uncommon
+	+20% Combat damage, -10% Defence for 1 day
+	Frostmoss Pale Ale
+	Uncommon
+	Immune to cold-damage traps for 1 day
+	Stoneheart Reserve
+	Rare
+	+30 Max Stamina, +10% all skills for 2 days
+	
+
+4.4 Rune Crafting
+Overview
+Rune crafting is the game's unique magic system, rooted in ancient dwarven lore. Runes are physical inscriptions applied to objects using rune-chisels and reagents derived from rare ores and herbs. Discovered through exploration of ancient ruins and relationship with settler NPCs who are lore-keepers.
+Application Targets (Examples):
+* Tools: improved efficiency, auto-harvest radius, ore sense
+* Weapons: elemental damage, lifesteal, stagger
+* Armour: damage reduction, reflect, stamina recovery
+* Structures: settlement walls gain rune-wards (reduces raid damage), hearth gains warmth aura
+* Crops: accelerated growth, pest resistance, quality bonus
+Crafting Process
+* Acquire a Rune Fragment (exploration, merchants, settler quests)
+* Combine fragment with Rune-Chisel and reagent at the Rune Bench
+* Apply the completed rune to a compatible item — permanent but can be overwritten
+* Higher-tier runes require special resources.
+* Rune Mastery skill unlocks dual-rune slots and legendary rune patterns
+4.5 Fishing
+Overview
+Subterranean lakes and underground rivers host unique aquatic life — blind cave fish, glowing eels, and stone crabs. Fishing provides food, alchemical reagents, and rare treasure items.
+* Minigame: easy directional + tension mechanic.
+* Fish require specific lure + bait + time + location to catch Some fish will attack any combination but some are very particular.
+* Fishing spots degrade if over-fished; recover over seasons
+* Rare fish can be donated to the settlement museum or displayed as trophies
+* Legend Fish: unique named creatures with special lore and rewards
+* Fishing skill improves cast range, minigame timing windows, and rare fish chance
+4.6 Cooking
+Overview
+Cooking converts raw ingredients into meals that restore stamina, confer stat buffs, or are sold for profit. The settlement cookhouse, once built, allows a settler to cook automatically.
+* Simple meals: 1-2 ingredients, basic stamina recovery
+* Complex meals: 3-5 ingredients, multiple buff effects
+* Feasts: large-batch recipes served during festivals — settlement-wide buff for 3 days
+* Cooking skill expands recipe discovery and improves meal quality tier
+4.7 Crafting
+Overview
+A broad system covering tools, weapons, furniture, building components, and settlement infrastructure. Crafting stations unlock progressively and can be staffed by skilled settlers.
+Key Crafting Stations
+* Forge: weapons, armour, metal tools, structural components
+* Carpentry Bench: furniture, wooden tools, crates, doors
+* Rune Bench: rune crafting (see 4.4)
+* Alchemy Table: potions, reagent refining, special consumables
+* Loom: cloth goods, bags, flags, and settler clothing
+* Mason's Table: stone blocks, paving, decorative stonework
+________________
+
+
+5. Settlement System
+
+
+5.1 Settlement Growth
+Kyndholm begins as a simple camp. Growth is organic — new buildings unlock as the player progresses, and new settlers arrive based on Renown score & building availability.
+Renown
+	A score reflecting settlement size, quality of life, and notable achievements
+	Tier 1
+	Outpost (1–5 settlers) — basic amenities unlocked
+	Tier 2
+	Camp (5–13 settlers) — tavern, market, infirmary
+	Tier 3
+	Hold (14–25 settlers) — full infrastructure, specialist roles
+	Tier 4
+	Stronghold (26+ settlers) — legendary buildings, diplomatic options
+	
+
+5.2 Settler System
+Each settler is a named dwarf with a skill speciality, personality trait, and personal storyline. Settlers can be assigned to roles appropriate to their skill specialty, and will work autonomously during the player's day.
+Example Settler Roles
+* Farmer: tends crops, waters fields, harvests automatically
+* Miner: operates passive mining nodes, processes ore
+* Brewer: manages fermentation vats, kegs, and tavern stock
+* Cook: runs the cookhouse, prepares daily meals for the settlement
+* Guard: patrols settlement perimeter, improves raid defence rating
+* Merchant: runs the market stall, manages trade with visiting caravans
+* Runesmith: researches rune patterns, applies runes to settlement structures
+Settler Relationships
+* Friendship level (0–10) affected by gift-giving, completing quests, and sharing meals
+* Settlers at high friendship unlock personal quests and unique crafting recipes
+* Settlers can form relationships with each other — couples may have children (long-term growth)
+* Unhappy settlers reduce their work quality; very unhappy settlers may leave
+5.3 Buildings
+Building
+	Tier
+	Function
+	Hearth Hall
+	Tier 1
+	Core building; unlocked at start
+	Storage Cache
+	Tier 1
+	Increases storage capacity
+	Crop Plot
+	Tier 1
+	Farmable land; expandable
+	Forge
+	Tier 1
+	Metal crafting
+	Brew Shed
+	Tier 2
+	Brewing and fermentation
+	Tavern
+	Tier 2
+	Serves ale; grants settlement-wide buffs
+	Cookhouse
+	Tier 2
+	Automated meal production
+	Infirmary
+	Tier 2
+	Heals injured settlers faster
+	Market Stall
+	Tier 2
+	Enables trade with merchant caravans
+	Rune Workshop
+	Tier 3
+	Advanced rune research and application
+	Great Hall
+	Tier 3
+	Hosts feasts and festivals; major morale boost
+	Barracks
+	Tier 3
+	Trains guards; improves raid defence rating
+	Museum
+	Tier 3
+	Display rare fish, artifacts; boosts Renown
+	Stronghold Gatehouse
+	Tier 4
+	Dramatically improves raid resistance
+	________________
+
+
+6. Combat & Raids
+
+
+6.1 Combat System
+Combat is real-time, top-down action with a simple but expressive kit. The player dodges, attacks, and uses consumables. Settlers assigned as guards fight semi-autonomously during raids.
+Player Combat
+* Melee weapons: pickaxes, axes, war-hammers — each with different speed/reach/damage
+* Ranged option: hand-cranked crossbow (slow reload, high damage)
+* Dodge roll with brief invincibility window — stamina cost
+* Block: hold up to reduce incoming damage (shield required)
+* Rune-enhanced weapons add elemental effects (fire, frost, lightning)
+Enemies (Examples)
+* Goblin Scouts: fast, low damage, travel in packs
+* Goblin Berserkers: slow, high damage, break through walls
+* Cave Trolls: boss-tier, appear in deep tunnels and major raids
+* Spore Spiders: poison attacks, burrow underground to ambush
+* Deepcrawlers: ancient constructs found in ruins, immune to most rune effects
+6.2 Raid System
+Raid Triggers
+Raids are not purely calendar-based. The Raid Threat Meter fills based on:
+* Settlement value (total asset worth)
+* Renown tier increases
+* Story progression milestones
+* Specific in-game actions (disturbing an ancient ruin, killing a goblin chieftain)
+Raid Types
+Type
+	Threat Level
+	Description
+	Skirmish
+	Low
+	3–6 goblins probe the perimeter — quick, low stakes
+	Raid
+	Medium
+	10–20 attackers target stockpiles and settlers
+	Siege
+	High
+	30+ attackers; 3-wave structure
+	Boss Assault
+	Story
+	Named enemy leader; triggered by story beats; unique loot
+	
+
+Defence Mechanics
+* Settlement walls slow and channel attackers
+* Rune-wards on walls deal damage or stagger raiders
+* Guard settlers fight automatically; player supplements them
+* Barricades can be built and repaired between raids
+* Defensive traps can be placed to damage & slow attackers
+* Alarm bell (buildable) gives advance warning of approaching raiders
+* Post-raid: repair damaged buildings, heal settlers, collect raid loot
+________________
+
+
+7. Economy & Progression
+
+
+7.1 Currency
+The primary currency is the Stone Mark (SM) — small stamped metal coins. 
+7.2 Income Sources
+* Selling crops, fish, cooked meals, and crafted goods to merchants
+* Tavern income from serving settlers (small passive income)
+* Museum donations and artifact discoveries
+* Completing bounties posted on the settlement notice board
+* Raid loot: defeated raiders drop equipment and gold
+8. Art & Audio Direction
+
+
+8.1 Visual Style
+Kyndholm uses a 32x32 pixel art grid across all sprites and tiles. The palette leans towards warm underground tones: deep browns, amber firelight, cool stone greys, and pops of bioluminescent green and blue. The aesthetic sits between the warmth of Stardew Valley and the gritty texture of early Ultima games.
+Visual Pillars
+* Warmth: firelit halls, glowing ale in a mug, mushroom lanterns casting golden pools
+* Stone & Earth: rough-hewn walls, dirt floors, roots breaking through stone ceilings
+* Ancient Mystery: rune-carved archways, flickering ghostlight in deep ruins
+* Seasonal Variation: Deep Winter (frost creeping into tunnels), Stone Summer (lava seams glow)
+Character Design
+* Dwarves are stocky, expressive sprites — large beards are customisable (a key personalisation feature)
+* Enemies are visually distinct silhouettes readable at small scale
+* Settlers have varied skin tones, hair colours, and equipment that reflects their role
+8.2 UI & HUD
+* Minimalist HUD: health orb, stamina bar, date/season indicator, item toolbar
+* Inventory: grid-based, categorised by item type
+* Journal: tracks quests, lore entries, recipe discoveries, and relationship notes
+* Settlement overview map: top-down schematic showing buildings and assigned settlers
+8.3 Audio Direction
+Music
+* Adaptive soundtrack: calm acoustic instrumentation for daytime farming
+* Heavier, percussion-forward tracks for combat and raids
+* Instrumentation rooted in folk/medieval with dwarven twist: hammered dulcimer, deep drums, fiddle
+* Each season has its own melodic theme
+Sound Effects
+* Satisfying tactile feedback: pickaxe clangs, crop harvest pops, brewing bubbles
+* Environmental audio: dripping water, distant cave rumbles, torch crackle
+* UI sounds: warm, wooden — no harsh digital bleeps
+________________
+
+
+9. Technical Considerations
+
+
+9.1 Engine
+Godot 4 has been selected as the game engine for this project. Key reasons for this decision:
+* Open source and royalty-free — no revenue share or licensing fees
+* Excellent native 2D pipeline with built-in pixel art support and snap-to-grid tools
+* Lightweight and fast to iterate — well suited to a small team or solo development
+* GDScript is Python-like and approachable; C# support available for performance-critical systems
+* Strong indie community with extensive resources for 2D RPG and farming-sim style games
+* Export to Windows, macOS, Linux, and console platforms (via third-party exporters)
+9.2 Save System
+* Auto-save at end of each in-game day
+* Manual save slots (3 minimum)
+* Cloud save support via platform integrations
+9.3 Accessibility
+* Fully remappable controls (keyboard, controller)
+* Colourblind mode (UI icons use shape + colour coding)
+* Adjustable text size
+* Optional auto-play for farming/fishing minigames
+* Pause-anywhere — no real-time pressure outside combat/raid events
+________________
+
+
+10. Development Roadmap (Indicative)
+
+
+Phase
+	Timeline
+	Goals
+	Pre-Production
+	Months 1–3
+	GDD completion, art style prototype, Godot 4 setup, core loop proof-of-concept
+	Alpha
+	Months 4–9
+	Core farming, mining, crafting loop; basic settlement; combat; single season
+	Beta
+	Months 10–15
+	All 8 skill systems, full settler system, all 4 seasons, raid system, Act I story
+	Content Complete
+	Months 16–20
+	All story acts, buildings, settlers, enemies, balancing, achievements
+	Release Candidate
+	Months 21–22
+	QA, performance, accessibility pass, platform certification
+	Launch
+	Month 23
+	PC release (Early Access or 1.0 TBD)
+	Post-Launch
+	Ongoing
+	Community feedback, DLC / content updates, console ports
+	
+
+Appendix A — Open Questions
+
+
+The following items require further design discussion:
+* Procedural world generation vs. hand-crafted map for Kyndholm and surrounding areas
+* Relationship depth: will settlers be marriageable? (Stardew precedent)
+* Permadeath / Ironmode option for players who want a harder experience
+* Mod support: Steam Workshop integration post-launch?
+* Exact customisation feature scope
+
+
+
+
+End of Document — Kyndholm GDD v0.3
+Page

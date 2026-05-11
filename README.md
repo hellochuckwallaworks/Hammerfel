@@ -1,8 +1,8 @@
-# Hammerfel
+# Kyndholm
 
 A cozy dwarven farming & crafting RPG. Top-down 2D, pixel art, Godot 4.x.
 
-> **Read first:** [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) explains the folder layout and conventions. [`docs/Hammerfel_GDD_v0.2.docx`](docs/Hammerfel_GDD_v0.2.docx) is the Game Design Document.
+> **Read first:** [`docs/Kyndholm_GDD_v0.3.txt`](docs/Kyndholm_GDD_v0.3.txt) is the Game Design Document. [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) explains the folder layout and conventions.
 
 ---
 
@@ -48,7 +48,7 @@ You then need a way for your machine to authenticate to GitHub as your user. Pic
 
 1. Create a PAT at https://github.com/settings/tokens?type=beta
    - Resource owner: `hellochuckwallaworks`
-   - Repository access: select Hammerfel (or all repos)
+   - Repository access: select Kyndholm (or all repos)
    - Permissions: **Contents → Read and Write**, **Metadata → Read**
 2. When you `git clone` or `git push` you'll be prompted for a username and password — paste the PAT as the password. Git for Windows will cache it automatically.
 
@@ -58,15 +58,15 @@ You then need a way for your machine to authenticate to GitHub as your user. Pic
 
 **SSH:**
 ```bash
-git clone git@github.com:hellochuckwallaworks/Hammerfel.git
-cd Hammerfel
+git clone git@github.com:hellochuckwallaworks/Kyndholm.git
+cd Kyndholm
 git lfs pull   # fetch any LFS-tracked binaries
 ```
 
 **HTTPS:**
 ```bash
-git clone https://github.com/hellochuckwallaworks/Hammerfel.git
-cd Hammerfel
+git clone https://github.com/hellochuckwallaworks/Kyndholm.git
+cd Kyndholm
 git lfs pull
 ```
 

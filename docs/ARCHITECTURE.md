@@ -1,11 +1,11 @@
-# Hammerfel — Project Architecture
+# Kyndholm — Project Architecture
 
 This document explains the folder layout and conventions. Read this before adding new code so the project stays coherent as it grows.
 
 ## Top-level layout
 
 ```
-Hammerfel/
+Kyndholm/
 ├── addons/            Godot plugins (empty for now)
 ├── assets/            Art, audio, fonts — Git LFS-tracked binaries
 ├── data/              Concrete .tres resource instances (specific crops, buildings, runes, etc.)
@@ -47,11 +47,11 @@ Each major game system from the GDD has its own folder:
 
 | Folder | What goes here | Status |
 |---|---|---|
-| `player/` | Player character scene, controller, stats | ✅ scaffolded |
-| `world/` | Top-level world scene, terrain, world manager | ✅ scaffolded |
-| `ui/main_menu/` | Title screen | ✅ scaffolded |
-| `ui/hud/` | In-game HUD (health, stamina, date) | ✅ scaffolded |
-| `ui/pause_menu/` | Pause overlay | ✅ scaffolded |
+| `player/` | Player character scene, controller, stats | placeholder |
+| `world/` | Top-level world scene, terrain, world manager | placeholder |
+| `ui/main_menu/` | Title screen | placeholder |
+| `ui/hud/` | In-game HUD (health, stamina, date) | placeholder |
+| `ui/pause_menu/` | Pause overlay | placeholder |
 | `ui/inventory/` | Player inventory grid | placeholder |
 | `ui/journal/` | Quest log, lore, recipes, relationships | placeholder |
 | `ui/settings/` | Settings menu | placeholder |
