@@ -35,45 +35,11 @@ const ROW_FOR_SECTOR  := [2, 1, 0, 1, 2, 3, 4, 3]
 const FLIP_FOR_SECTOR := [false, false, false, true, true, true, false, false]
 
 @onready var sprite: Sprite2D = $Sprite2D
-@onready var interact_zone: Area2D = $InteractZone
 
 var _frame_index := 0
 var _frame_timer := 0.0
 var _facing_row := 0     # default facing down
 var _facing_flip := false
-var _interactables_in_range: Array[Interactable] = []
-
-func _ready() -> void:
-	interact_zone.area_entered.connect(_on_interact_area_entered)
-	interact_zone.area_exited.connect(_on_interact_area_exited)
-
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact"):
-		var closest := _closest_interactable()
-		if closest:
-			closest.interact(self)
-
-func _on_interact_area_entered(area: Area2D) -> void:
-	if area is Interactable:
-		_interactables_in_range.append(area)
-		area.show_prompt()
-
-func _on_interact_area_exited(area: Area2D) -> void:
-	if area is Interactable and area in _interactables_in_range:
-		_interactables_in_range.erase(area)
-		area.hide_prompt()
-
-func _closest_interactable() -> Interactable:
-	var closest: Interactable = null
-	var min_dist_sq := INF
-	for i in _interactables_in_range:
-		if not is_instance_valid(i):
-			continue
-		var d := global_position.distance_squared_to(i.global_position)
-		if d < min_dist_sq:
-			min_dist_sq = d
-			closest = i
-	return closest
 
 func _physics_process(delta: float) -> void:
 	var input_vec := Input.get_vector("move_left", "move_right", "move_up", "move_down")
