@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://features/fishing/fishing_spot.gd" id="1_fishing"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_spot"]
+size = Vector2(32, 32)
+
+[node name="FishingSpot" type="Area2D"]
+script = ExtResource("1_fishing")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_spot")
+
+[node name="Prompt" type="Label" parent="."]
+offset_left = -28.0
+offset_top = -32.0
+offset_right = 28.0
+offset_bottom = -16.0
+horizontal_alignment = 1
+text = "[E] Fish"
